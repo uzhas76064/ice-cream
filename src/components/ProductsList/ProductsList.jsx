@@ -1,5 +1,5 @@
 import {products} from "../../mock.js";
-import ProductsListItem from "./ProductsListItem/ProductsListItem.jsx";
+import ProductsListItem from "../Product/ProductsListItem.jsx";
 
 const ProductsList = (props) => {
     return (

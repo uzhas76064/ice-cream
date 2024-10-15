@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ProductsListItem = ({image, title, costByCard, cost}) => {
     return (
         <li className="products-list__item product">
@@ -19,6 +21,13 @@ const ProductsListItem = ({image, title, costByCard, cost}) => {
             </article>
         </li>
     )
+}
+
+ProductsListItem.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    cost: PropTypes.number,
+    costByCard: PropTypes.number,
 }
 
 export default ProductsListItem;

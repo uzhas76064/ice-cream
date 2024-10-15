@@ -1,6 +1,6 @@
 import ProductsList from "../ProductsList/ProductsList.jsx";
 
-const Catalog = (props) => {
+const Catalog = () => {
     return (
         <section className="catalog">
             <div className="container">
