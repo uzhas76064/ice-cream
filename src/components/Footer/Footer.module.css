@@ -1,0 +1,14 @@
+.footer {
+    background-image: url("../../img/bg.png");
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 28px 26px 28px;
+}
+
+.logo {
+    display: block;
+}

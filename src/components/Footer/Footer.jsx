@@ -1,15 +1,24 @@
-import logo from '../../img/logo.svg';
 import Contacts from "../Contacts/Contacts.jsx";
 import PropTypes from "prop-types";
 
+import styles from "./Footer.module.css";
+import logoBig from "../../img/logo.svg";
+import logoSmall from "../../img/logo_small.svg";
+
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="container">
-                <a href={logo} className="logo"></a>
-                <Contacts email="mailto: uzhas76064@gmail.com"
+        <footer className={styles.footer}>
+            <div className={styles.container}>
+                <a href="#" className={styles.logo}>
+                    <picture>
+                        <source media="(min-width: 1200px)" srcSet={logoBig}/>
+                        <source media="(min-width: 430px)" srcSet={logoSmall}/>
+                        <img src={logoSmall} alt="logo"/>
+                    </picture>
+                </a>
+                <Contacts email="uzhas76064@gmail.com"
                           name="Хватов Максим"
-                          phone="tel:+79912365058"/>
+                          phone="+79912365058"/>
             </div>
         </footer>
     )
