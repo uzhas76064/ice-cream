@@ -1,0 +1,15 @@
+.productsList {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.productsList:nth-child(odd) {
+    grid-column: 1/2;
+}
+
+.p:nth-child(even) {
+    grid-column: 2/-1;
+}

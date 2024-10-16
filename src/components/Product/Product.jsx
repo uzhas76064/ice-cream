@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import styles from "./Product.module.css";
+
 const ProductCost = ({costByCard, cost}) => {
     return (
         <div className="product-item__cost">
@@ -16,11 +18,11 @@ const ProductCost = ({costByCard, cost}) => {
     )
 }
 
-const ProductsListItem = ({image, title, costByCard, cost}) => {
+const Product = ({image, title, costByCard, cost}) => {
     return (
-        <li className="products-list__item product">
+        <li className={styles.product}>
             <article className="product-item">
-                <img src={image} alt={title}/>
+                <img className={styles.productImage} src={image} alt={title}/>
                 <ProductCost costByCard={costByCard} cost={cost} />
                 <h3 className="product-item__title title">{title}</h3>
                 <div className="in-favorite"></div>
@@ -35,11 +37,11 @@ ProductCost.propTypes = {
     cost: PropTypes.number
 }
 
-ProductsListItem.propTypes = {
+Product.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     cost: PropTypes.number,
     costByCard: PropTypes.number,
 }
 
-export default ProductsListItem;
+export default Product;

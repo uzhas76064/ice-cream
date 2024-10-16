@@ -1,11 +1,13 @@
 import {products} from "../../mock.js";
-import ProductsListItem from "../Product/ProductsListItem.jsx";
+import Product from "../Product/Product.jsx";
+
+import styles from "./ProductsList.module.css";
 
 const ProductsList = (props) => {
     return (
-        <ul className='products-list'>
+        <ul className={styles.productsList}>
             {products.map((product) => {
-                return <ProductsListItem key={product.id} {...product} />;
+                return <Product key={product.id} {...product} />;
             })}
         </ul>
     )
