@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import styles from "./Product.module.css";
+import Button from "../UI/Button/Button.jsx";
 
 const ProductCost = ({costByCard, cost}) => {
     return (
@@ -28,9 +29,9 @@ const Product = ({image, title, costByCard, cost, addToCart}) => {
                 <ProductCost costByCard={costByCard} cost={cost} />
                 <p className={styles.productTitle}>{title}</p>
                 <div className="in-favorite"></div>
-                <button className={styles.addButton} onClick={() => addToCart(product)}>
+                <Button className={styles.addButton} eventHandler={() => addToCart(product)}>
                     В корзину
-                </button>
+                </Button>
             </article>
         </li>
     )
