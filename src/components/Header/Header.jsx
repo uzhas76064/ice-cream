@@ -13,7 +13,7 @@ const Header = props => {
                         <img src={logoSmall} alt="logo"/>
                     </picture>
                 </a>
-                <div className="cart">Корзина</div>
+                <div className="cart">Корзина {props.cartItems.length}</div>
             </div>
         </header>
     )

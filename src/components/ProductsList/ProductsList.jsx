@@ -7,7 +7,7 @@ const ProductsList = (props) => {
     return (
         <ul className={styles.productsList}>
             {products.map((product) => {
-                return <Product key={product.id} {...product} />;
+                return <Product key={product.id} {...product} {...props}/>;
             })}
         </ul>
     )

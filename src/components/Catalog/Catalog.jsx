@@ -3,12 +3,12 @@ import Title from "../UI/Title/Title.jsx";
 
 import styles from "./Catalog.module.css";
 
-const Catalog = () => {
+const Catalog = ({addToCart}) => {
     return (
         <section className={styles.catalog}>
             <div className="container">
                 <Title type={'h2'}>Каталог продукции</Title>
-                <ProductsList/>
+                <ProductsList addToCart={addToCart} />
             </div>
         </section>
     )
