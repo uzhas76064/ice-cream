@@ -5,3 +5,18 @@
     padding: 8px 16px;
     background-color: white;
 }
+
+.cart {
+    position: relative;
+}
+
+.cartCount {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    background-color: #FF6633;
+    color: white;
+    border-radius: 100%;
+    padding: 2px 4px;
+    font-size: 12px;
+}

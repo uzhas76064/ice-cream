@@ -1,9 +1,10 @@
 import logoBig from '../../img/logo.svg';
 import logoSmall from '../../img/logo_small.svg';
+import cart from '../../img/cart.svg';
 import styles from './Header.module.css';
 import PropTypes from "prop-types";
 
-const Header = props => {
+const Header = ({totalCost, cartItems}) => {
     return (
         <header className="header">
             <div className={styles.container}>
@@ -14,14 +15,19 @@ const Header = props => {
                         <img src={logoSmall} alt="logo"/>
                     </picture>
                 </a>
-                <div className="cart">Корзина {props.cartItems.length}</div>
+                <div className="cart">
+                    <span>{totalCost} &#8381;</span>
+                    <img className={styles.cart} src={cart} alt="Корзина"/>
+                    <span className={styles.cartCount}>{cartItems.length}</span>
+                </div>
             </div>
         </header>
     )
 }
 
 Header.propTypes = {
-    cartItems: PropTypes.array
+    cartItems: PropTypes.array,
+    totalCost: PropTypes.number
 }
 
 export default Header;

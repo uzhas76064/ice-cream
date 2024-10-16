@@ -11,6 +11,9 @@ function App() {
         return savedCart ? JSON.parse(savedCart) : [];
     });
 
+// Рассчитываем общую сумму товаров в корзине
+    const totalCost = cartItems.reduce((total, product) => total + product.cost, 0);
+
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
@@ -22,7 +25,7 @@ function App() {
 
   return (
     <>
-        <Header cartItems={cartItems} />
+        <Header cartItems={cartItems} totalCost={totalCost} />
         <Promo>Доставка бесплатно от 1000 &#8381;</Promo>
         <Catalog addToCart={addToCart} />
         <Footer/>
