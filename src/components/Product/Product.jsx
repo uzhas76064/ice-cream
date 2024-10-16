@@ -4,14 +4,14 @@ import styles from "./Product.module.css";
 
 const ProductCost = ({costByCard, cost}) => {
     return (
-        <div className="product-item__cost">
+        <div className={styles.productItemCost}>
             <div className={styles.costByCard}>
-                <b>{costByCard} &#8381;</b>
-                <small>С картой</small>
+                <b>{costByCard} &#8381;</b><br/>
+                <small className={styles.subTitle}>С картой</small>
             </div>
             <div className={styles.defaultCost}>
-                <span>{cost} &#8381;</span>
-                <small>С картой</small>
+                <span>{cost} &#8381;</span><br/>
+                <small className={styles.subTitle}>Обычная</small>
             </div>
         </div>
 
@@ -28,7 +28,7 @@ const Product = ({image, title, costByCard, cost, addToCart}) => {
                 <ProductCost costByCard={costByCard} cost={cost} />
                 <p className={styles.productTitle}>{title}</p>
                 <div className="in-favorite"></div>
-                <button className="button" onClick={() => addToCart(product)}>
+                <button className={styles.addButton} onClick={() => addToCart(product)}>
                     В корзину
                 </button>
             </article>

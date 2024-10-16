@@ -3,6 +3,7 @@ import Catalog from "./components/Catalog/Catalog.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import "./global.css";
 import {useEffect, useState} from "react";
+import Promo from "./components/Promo/Promo.jsx";
 
 function App() {
     const [cartItems, setCartItems] = useState(() => {
@@ -22,6 +23,7 @@ function App() {
   return (
     <>
         <Header cartItems={cartItems} />
+        <Promo>Доставка бесплатно от 1000 &#8381;</Promo>
         <Catalog addToCart={addToCart} />
         <Footer/>
     </>

@@ -1,0 +1,7 @@
+.promo {
+    text-align: center;
+    padding: 26px 15px;
+    width: 100%;
+    background: #ffffff url("../../img/promo.png") repeat;
+    margin-bottom: 44px;
+}
