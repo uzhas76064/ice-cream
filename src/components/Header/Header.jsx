@@ -1,6 +1,7 @@
 import logoBig from '../../img/logo.svg';
 import logoSmall from '../../img/logo_small.svg';
 import styles from './Header.module.css';
+import PropTypes from "prop-types";
 
 const Header = props => {
     return (
@@ -17,6 +18,10 @@ const Header = props => {
             </div>
         </header>
     )
+}
+
+Header.propTypes = {
+    cartItems: PropTypes.array
 }
 
 export default Header;

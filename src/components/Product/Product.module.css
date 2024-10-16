@@ -5,6 +5,7 @@
     box-shadow: 1px 2px 4px 0 #0000001A;
     border-radius: 4px;
     padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .productImage {
@@ -26,6 +27,11 @@
     grid-template-rows: auto 1fr auto;
     height: 100%;
     position: relative;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .productItemCost {

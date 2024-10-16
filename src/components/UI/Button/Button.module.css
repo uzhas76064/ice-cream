@@ -4,3 +4,9 @@
     padding: 8px;
     color: #70C05B;
 }
+
+.button:hover {
+    background-color: #FF6633;
+    border: none;
+    color: white;
+}
