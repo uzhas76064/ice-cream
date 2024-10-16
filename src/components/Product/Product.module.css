@@ -7,3 +7,22 @@
     width: 100%;
     height: 100%;
 }
+
+.productTitle {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.defaultCost {
+    display: none;
+}
+
+
+.productItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.costByCard {
+
+}
