@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 
 import styles from "./Product.module.css";
+import toFavorite from "../../img/fav.svg";
+import liked from "../../img/liked.svg";
 import Button from "../UI/Button/Button.jsx";
 
 const ProductCost = ({costByCard, cost}) => {
@@ -19,8 +21,9 @@ const ProductCost = ({costByCard, cost}) => {
     )
 }
 
-const Product = ({image, title, costByCard, cost, addToCart}) => {
+const Product = ({image, title, costByCard, cost, addToCart, isFavorite}) => {
     const product = { title, costByCard, cost, image };
+    const inFavorite = isFavorite ? liked:toFavorite;
 
     return (
         <li className={styles.product}>
@@ -28,7 +31,9 @@ const Product = ({image, title, costByCard, cost, addToCart}) => {
                 <img className={styles.productImage} src={image} alt={title}/>
                 <ProductCost costByCard={costByCard} cost={cost} />
                 <p className={styles.productTitle}>{title}</p>
-                <div className="in-favorite"></div>
+                <div className={styles.inFavorite}>
+                    <img width={24} height={21} src={inFavorite} alt="Добавить в избранное"/>
+                </div>
                 <Button className={styles.addButton} eventHandler={() => addToCart(product)}>
                     В корзину
                 </Button>
@@ -48,6 +53,7 @@ Product.propTypes = {
     cost: PropTypes.number,
     costByCard: PropTypes.number,
     addToCart: PropTypes.func,
+    isFavorite: PropTypes.bool
 }
 
 export default Product;

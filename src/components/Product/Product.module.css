@@ -1,4 +1,5 @@
 .product {
+    position: relative;
     list-style: none;
     width: 160px;
     background-color: white;
@@ -26,7 +27,15 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     height: 100%;
-    position: relative;
+}
+
+.inFavorite {
+    position: absolute;
+    width: 24px;
+    height: 21px;
+    top: 5px;
+    right: 5px;
+    border-radius: 4px;
 }
 
 .product:hover {
