@@ -1,4 +1,5 @@
-import logo from '../../img/logo.svg';
+import logoBig from '../../img/logo.svg';
+import logoSmall from '../../img/logo_small.svg';
 import styles from './Header.module.css';
 
 const Header = props => {
@@ -6,7 +7,11 @@ const Header = props => {
         <header className="header">
             <div className={styles.container}>
                 <a href="#" className="logo">
-                    <img width={152} height={32} src={logo} alt=""/>
+                    <picture>
+                        <source media="(min-width: 1200px)" srcSet={logoBig}/>
+                        <source media="(min-width: 430px)" srcSet={logoSmall}/>
+                        <img src={logoSmall} alt="logo"/>
+                    </picture>
                 </a>
                 <div className="cart">Корзина</div>
             </div>
