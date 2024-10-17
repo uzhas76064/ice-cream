@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 const Catalog = ({addToCart}) => {
     return (
         <section className={styles.catalog}>
-            <div className="container">
+            <div className={styles.container}>
                 <Title type={'h1'}>Каталог продукции</Title>
                 <ProductsList addToCart={addToCart} />
             </div>

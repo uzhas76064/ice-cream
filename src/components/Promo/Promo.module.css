@@ -4,4 +4,11 @@
     width: 100%;
     background: #ffffff url("../../img/promo.png") repeat;
     margin-bottom: 44px;
+
+    @media (min-width: 1440px) {
+        width: 1208px;
+        background:  url("../../img/promo.png") repeat,
+                    url("../../img/promo_big.png") no-repeat left;
+        margin: 0 auto 80px;
+    }
 }

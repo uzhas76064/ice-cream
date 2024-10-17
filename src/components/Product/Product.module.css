@@ -7,6 +7,10 @@
     border-radius: 4px;
     padding: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (min-width: 1920px) {
+        width: 272px;
+    }
 }
 
 .productImage {
@@ -19,6 +23,10 @@
     font-size: 12px;
     line-height: 18px;
     grid-column: 1/-1;
+
+    @media (min-width: 1440px) {
+        font-size: 16px;
+    }
 }
 
 
@@ -47,12 +55,20 @@
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (min-width: 1440px) {
+        font-size: 18px;
+    }
 }
 
 .subTitle {
     font-size: 8px;
     line-height: 12px;
     color: #BFBFBF;
+
+    @media (min-width: 1440px) {
+        font-size: 12px;
+    }
 }
 
 .costByCard {

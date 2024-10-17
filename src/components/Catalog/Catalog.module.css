@@ -1,3 +1,15 @@
 .catalog {
     padding: 0 12px;
+
+    @media (min-width: 1440px) {
+        padding: 0 116px;
+        margin-bottom: 80px;
+    }
+}
+
+.container {
+    @media (min-width: 1440px) {
+        max-width: 1208px;
+        margin: auto;
+    }
 }
